@@ -19,10 +19,5 @@ behavior makes the explorer a knowledge-based agent.
 - P = Pit
 - B = Breeze
 
-## Simulation
-
-### To install dependencies : 
-`pip install -r requirements.txt`
-
 ### Run Simulation
 `python main.py`
