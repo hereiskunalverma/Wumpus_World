@@ -99,8 +99,9 @@ class Agent():
     def explore_world(self):
         last_move = ''
         already_moved = False
-        print("knowledge_base: ", self.knowledge_base)
+        # print("knowledge_base: ", self.knowledge_base)
         while self.found_gold == False:
+            print("knowledge_base: ", self.knowledge_base)
             if self.found_gold == True:
                 break
 

@@ -39,17 +39,33 @@ label_grid = [[Grid_Label(master, i, j)for j in range(world.cols)]
 # agent = Agent(world, label_grid)
 
 # start = Button(master, text="Start", command= lambda: solve_wumpus_world(master, "world_1.txt"))
-world = Button(master, text="Simulate",  command=lambda: solve_wumpus_world(master, "world.txt"), width=8,
-               font="Helvetica 14 bold", bg="gray80", fg="gray40", borderwidth=0, activeforeground="white", activebackground="gray40")
+world1 = Button(master, text="World 1",  command=lambda: solve_wumpus_world(master, "test1.txt"), width=8,
+                font="Helvetica 14 bold", bg="gray80", fg="gray40", borderwidth=0, activeforeground="white", activebackground="gray40")
+world2 = Button(master, text="World 2",  command=lambda: solve_wumpus_world(master, "test2.txt"), width=8,
+                font="Helvetica 14 bold", bg="gray80", fg="gray40", borderwidth=0, activeforeground="white", activebackground="gray40")
+world3 = Button(master, text="World 3",  command=lambda: solve_wumpus_world(master, "test3.txt"), width=8,
+                font="Helvetica 14 bold", bg="gray80", fg="gray40", borderwidth=0, activeforeground="white", activebackground="gray40")
+world4 = Button(master, text="World 4",  command=lambda: solve_wumpus_world(master, "test4.txt"), width=8,
+                font="Helvetica 14 bold", bg="gray80", fg="gray40", borderwidth=0, activeforeground="white", activebackground="gray40")
 
 
-legends = """A - Agent\nW - Wumpus\nB - Breeze\nP - Pit\nG - Gold\nS - Stench
-          """
-label_legends = Label(master, text=legends)
+agent_legend = Label(master, text="A - Agent")
+wumpus_legend = Label(master, text="W - Wumpus")
+breeze_legend = Label(master, text="B - Breeze")
+pit_legend = Label(master, text="P - Pit")
+gold_legend = Label(master, text="G - Gold")
+stench_legend = Label(master, text="S - Stench")
 
 # start.grid(row = 0, column = len(label_grid[0]), sticky = W, pady = 1)
-world.grid(row=0, column=len(label_grid[0]))
-label_legends.grid(row=1, column=len(label_grid[0]))
-
+world1.grid(row=0, column=len(label_grid[0]))
+world2.grid(row=1, column=len(label_grid[0]))
+world3.grid(row=2, column=len(label_grid[0]))
+world4.grid(row=3, column=len(label_grid[0]))
+agent_legend.grid(row=4, column=0)
+wumpus_legend.grid(row=4, column=1)
+breeze_legend.grid(row=4, column=2)
+pit_legend.grid(row=4, column=3)
+gold_legend.grid(row=4, column=4)
+stench_legend.grid(row=4, column=5)
 
 mainloop()
